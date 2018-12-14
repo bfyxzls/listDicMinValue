@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "listDicMinValue", "listDicMinValue.csproj", "{D1260BC2-6524-4066-A948-228C5CB5EAAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1260BC2-6524-4066-A948-228C5CB5EAAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1260BC2-6524-4066-A948-228C5CB5EAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1260BC2-6524-4066-A948-228C5CB5EAAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1260BC2-6524-4066-A948-228C5CB5EAAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

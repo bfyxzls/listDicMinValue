@@ -1,0 +1,11 @@
+/Users/lind.zhang/github/listDicMinValue/obj/Debug/netcoreapp2.1/listDicMinValue.csproj.CoreCompileInputs.cache
+/Users/lind.zhang/github/listDicMinValue/obj/Debug/netcoreapp2.1/listDicMinValue.AssemblyInfoInputs.cache
+/Users/lind.zhang/github/listDicMinValue/obj/Debug/netcoreapp2.1/listDicMinValue.AssemblyInfo.cs
+/Users/lind.zhang/github/listDicMinValue/bin/Debug/netcoreapp2.1/listDicMinValue.deps.json
+/Users/lind.zhang/github/listDicMinValue/bin/Debug/netcoreapp2.1/listDicMinValue.runtimeconfig.json
+/Users/lind.zhang/github/listDicMinValue/bin/Debug/netcoreapp2.1/listDicMinValue.runtimeconfig.dev.json
+/Users/lind.zhang/github/listDicMinValue/bin/Debug/netcoreapp2.1/listDicMinValue.dll
+/Users/lind.zhang/github/listDicMinValue/bin/Debug/netcoreapp2.1/listDicMinValue.pdb
+/Users/lind.zhang/github/listDicMinValue/obj/Debug/netcoreapp2.1/listDicMinValue.dll
+/Users/lind.zhang/github/listDicMinValue/obj/Debug/netcoreapp2.1/listDicMinValue.pdb
+/Users/lind.zhang/github/listDicMinValue/obj/Debug/netcoreapp2.1/listDicMinValue.csprojResolveAssemblyReference.cache
