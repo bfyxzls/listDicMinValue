@@ -51,34 +51,34 @@ namespace listDicMinValue
 			Dictionary<int, double> dic10 = new Dictionary<int, double>();
 			dic10.Add(5, 0); dic10.Add(9, 0); dic10.Add(1, 0); dic10.Add(7, 194); dic10.Add(3, 194); dic10.Add(8, 198); dic10.Add(4, 198); dic10.Add(6, 198); dic10.Add(10, 392); dic10.Add(2, 392);
 			list.Add(dic10);
-            
+
 			return list;
 		}
 		#endregion
 
-        /// <summary>
-        /// 序列
-        /// </summary>
-        /// <returns>The sort.</returns>
-        /// <param name="list">List.</param>
+		/// <summary>
+		/// 序列
+		/// </summary>
+		/// <returns>The sort.</returns>
+		/// <param name="list">List.</param>
 		static Dictionary<int, double> sort(List<Dictionary<int, double>> list)
 		{
 			Dictionary<int, double> minList = new Dictionary<int, double>();
 			foreach (var item in list)
 			{
-				KeyValuePair<int, double> min = getMin(item, minList, -1);
+				KeyValuePair<int, double> min = getMin2_0(item, minList, -1);
 				minList.Add(min.Key, min.Value);
 			}
 			return minList;
 		}
 
-        /// <summary>
-        /// 递归拿最小值
-        /// </summary>
-        /// <returns>The minimum.</returns>
-        /// <param name="item">Item.</param>
-        /// <param name="oldMin">Old minimum.</param>
-        /// <param name="except">Except.</param>
+		/// <summary>
+		/// 递归拿最小值
+		/// </summary>
+		/// <returns>The minimum.</returns>
+		/// <param name="item">Item.</param>
+		/// <param name="oldMin">Old minimum.</param>
+		/// <param name="except">Except.</param>
 		static KeyValuePair<int, double> getMin(Dictionary<int, double> item, Dictionary<int, double> oldMin, int except)
 		{
 			item.Remove(except);
@@ -92,12 +92,39 @@ namespace listDicMinValue
 			}
 			return getMin(item, oldMin, itemMin.Key);
 		}
+
+		/// <summary>
+		/// 递归拿最小值.net2.0
+		/// </summary>
+		/// <returns>The minimum.</returns>
+		/// <param name="item">Item.</param>
+		/// <param name="oldMin">Old minimum.</param>
+		/// <param name="except">Except.</param>
+		static KeyValuePair<int, double> getMin2_0(Dictionary<int, double> item, Dictionary<int, double> oldMin, int except)
+		{
+			item.Remove(except);
+
+			List<KeyValuePair<int, double>> myList = item.ToList();
+			myList.Sort(
+				delegate (KeyValuePair<int, double> pair1,
+						  KeyValuePair<int, double> pair2)
+				{
+					return pair1.Value.CompareTo(pair2.Value);
+				}
+				);
+			KeyValuePair<int, double> itemMin = myList.First();
+			if (!oldMin.ContainsKey(itemMin.Key))
+			{
+				return itemMin;
+			}
+			return getMin(item, oldMin, itemMin.Key);
+		}
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Hello World!");
 			List<Dictionary<int, double>> list = init();
-			foreach(var item in sort(list))
-				Console.WriteLine("key={0},value={1}",item.Key,item.Value);
+			foreach (var item in sort(list))
+				Console.WriteLine("key={0},value={1}", item.Key, item.Value);
 		}
 	}
 }
